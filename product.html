@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>House</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section id="navbar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="./assets/Brand.svg" alt="" srcset="" /></a>
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Featured</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">Properties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section id="search-bar">
+        <div class="container">
+            <div class="py-3">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="input-group mb-3">
+                            <input type="text" id="searchInput" class="form-control" placeholder="Search by city...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="property-list">
+        <div class="container">
+            <div class="row" id="property-list-row">
+                <!-- JavaScript will populate this section -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash message container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <h5 class="me-auto">Success</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Your enquiry has been submitted. We will get in touch with you ASAP!
+            </div>
+        </div>
+    </div>
+
+    <section id="footer">
+        <div class="footer d-flex justify-content-evenly py-5">
+            <div class="footer-brand">
+                <img src="./assets/Footer-Brand.svg" alt="">
+            </div>
+            <div class="social-links">
+                <h2 class="footer-heading text-white">Social Links</h2>
+                <a href="#"><img src="./assets/Facebook.svg" class="px-2" alt=""></a>
+                <a href="#"><img src="./assets/Whatsapp.svg" class="px-2" alt=""></a>
+                <a href="#"><img src="./assets/Instagram.svg" class="px-2" alt=""></a>
+                <a href="#"><img src="./assets/Telegram.svg" class="px-2" alt=""></a>
+            </div>
+            <div class="useful-links">
+                <h2 class="footer-heading text-white">Useful Links</h2>
+                <a href="#" class="footer-link-text"><p>Home</p></a>
+                <a href="#" class="footer-link-text"><p>Properties</p></a>
+                <a href="#" class="footer-link-text"><p>About us</p></a>
+                <a href="#" class="footer-link-text"><p>Contact us</p></a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+        <script>
+            // Define a variable to hold the property data
+            let propertiesData = null;
+        
+            // Fetch and display properties from JSON data
+            function displayProperties(properties) {
+                const propertyList = document.querySelector('#property-list .row');
+                propertyList.innerHTML = '';
+        
+                properties.forEach(property => {
+                    const card = document.createElement('div');
+                    card.className = 'col-md-4';
+                    card.innerHTML = `
+                        <div class="card" style="width: 25rem; margin: 10px">
+                            <img src="./assets/${property.image}" class="card-img-top" alt="Property Image">
+                            <div class="card-body">
+                                <h5 class="card-title">${property.name}</h5>
+                                <h6 class="card-title">${property.type}</h6>
+                                <div class="facilities d-flex justify-content-evenly">
+                                    <p><span><img src="./assets/Bed.svg"></span> ${property.beds} Beds</p>
+                                    <p><span><img src="./assets/Carpet.svg"></span> ${property.area}</p>
+                                    <p><span><img src="./assets/Location.svg"></span> ${property.city}</p>
+                                </div>
+                                <div class="call d-flex justify-content-between align-content-center">
+                                    <h5 class="price pt-2">${property.price}</h5>
+                                    <button type="button" class="btn btn-primary" onclick="showToast()">Enquire Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+        
+                    propertyList.appendChild(card);
+                });
+            }
+        
+            // Function to filter properties by city
+            function filterPropertiesByCity(city) {
+                city = city.toLowerCase(); // Convert the input to lowercase for case-insensitive search
+                return propertiesData.properties.filter(property => property.city.toLowerCase().includes(city));
+            }
+        
+            // Event listener for search input
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', () => {
+                const city = searchInput.value.trim();
+                
+                if (city === '') {
+                    // If the search bar is empty, display all properties
+                    displayProperties(propertiesData.properties);
+                } else {
+                    // Filter and display properties by city
+                    const filteredProperties = filterPropertiesByCity(city);
+                    displayProperties(filteredProperties);
+                }
+            });
+
+            // Function to show the toast message
+        function showToast() {
+            const toast = new bootstrap.Toast(document.getElementById('liveToast'));
+            toast.show();
+        }
+        
+            // Fetch the JSON data
+            fetch('data.json') // Replace with the path to your JSON file
+                .then(response => response.json())
+                .then(data => {
+                    propertiesData = data;
+                    displayProperties(propertiesData.properties);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        </script>
+        
+        
+        
+</body>
+
+</html>

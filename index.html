@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>House</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section id="navbar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="./assets/Brand.svg" alt="" srcset="" /></a>
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#hero-banner">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#featured-properties">Featured</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">Properties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section id="hero-banner">
+        <div class="hero-image">
+            <h1 class="banner-heading text-white text-center py-sm-5 py-lg-5">Discover Your Dream Haven: <br>Where Imagination Meets Home</h1>
+            <h3 class="banner-subheading text-white text-center p-sm-2 py-lg-2">Explore the Finest Collection of Luxury Properties Available Now</h3>
+            <div class="text-center py-lg-5 py-sm-5">
+                <a href="#" class="explore-button">Explore Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="properties">
+        <h1 class="heading text-center py-5">Best Type of Properties For You</h1>
+        <div class="d-flex justify-content-md-around justify-content-sm-around justify-content-lg-evenly">
+            <div class="card" style="width: 25rem;">
+                <img src="./assets/apartment-1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-text text-center">Apartments</h5>
+                </div>
+              </div>
+              <div class="card" style="width: 25rem;">
+                <img src="./assets/bunglow-1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-text text-center">Bungalows</h5>
+                </div>
+              </div>
+              <div class="card" style="width: 25rem;">
+                <img src="./assets/farmhouse-1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-text text-center">Farm Houses</h5>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <section id="featured-properties">
+        <h1 class="heading text-center py-5">Our Featured Properties</h1>
+        <div class="container">
+            <div id="propertyCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#propertyCarousel" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#propertyCarousel" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#propertyCarousel" data-bs-slide-to="2"></li>
+                </ol>
+    
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-md-around justify-content-sm-around justify-content-lg-evenly">
+                            <div class="card" style="width: 30rem;">
+                                <img src="./assets/House-1.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">House-1</h5>
+                                    <p class="featured">Featured <span><img src="./assets/featured-icon.svg"></span></p>
+                                    <div class="facilities d-flex justify-content-evenly">
+                                        <p><span><img src="./assets/Bed.svg"></span> 3 Bed</p>
+                                        <p><span><img src="./assets/Carpet.svg"></span> 1250 sq m.</p>
+                                        <p><span><img src="./assets/Location.svg"></span> Pune</p>
+                                    </div>
+                                    <div class="call d-flex justify-content-between align-content-center">
+                                        <h5 class="price pt-2">₹24 Lakhs</h5>
+                                        <a href="#" class="enquire-button">Enquire Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 30rem;">
+                                <img src="./assets/apartment-1.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-text">House-2</h5>
+                                    <p class="featured">Featured <span><img src="./assets/featured-icon.svg"></span></p>
+                                    <div class="facilities d-flex justify-content-evenly">
+                                        <p><span><img src="./assets/Bed.svg"></span> 3 Bed</p>
+                                        <p><span><img src="./assets/Carpet.svg"></span> 1250 sq m.</p>
+                                        <p><span><img src="./assets/Location.svg"></span> Pune</p>
+                                    </div>
+                                    <div class="call d-flex justify-content-between align-content-center">
+                                        <h5 class="price pt-2">₹24 Lakhs</h5>
+                                        <a href="#" class="enquire-button">Enquire Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-md-around justify-content-sm-around justify-content-lg-evenly">
+                            <div class="card" style="width: 30rem;">
+                                <img src="./assets/House-1.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-text">House-3</h5>
+                                    <p class="featured">Featured <span><img src="./assets/featured-icon.svg"></span></p>
+                                    <div class="facilities d-flex justify-content-evenly">
+                                        <p><span><img src="./assets/Bed.svg"></span> 3 Bed</p>
+                                        <p><span><img src="./assets/Carpet.svg"></span> 1250 sq m.</p>
+                                        <p><span><img src="./assets/Location.svg"></span> Pune</p>
+                                    </div>
+                                    <div class="call d-flex justify-content-between align-content-center">
+                                        <h5 class="price pt-2">₹24 Lakhs</h5>
+                                        <a href="#" class="enquire-button">Enquire Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 30rem;">
+                                <img src="./assets/House-2.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-text">House-4</h5>
+                                    <p class="featured">Featured <span><img src="./assets/featured-icon.svg"></span></p>
+                                    <div class="facilities d-flex justify-content-evenly">
+                                        <p><span><img src="./assets/Bed.svg"></span> 3 Bed</p>
+                                        <p><span><img src="./assets/Carpet.svg"></span> 1250 sq m.</p>
+                                        <p><span><img src="./assets/Location.svg"></span> Pune</p>
+                                    </div>
+                                    <div class="call d-flex justify-content-between align-content-center">
+                                        <h5 class="price pt-2">₹24 Lakhs</h5>
+                                        <a href="#" class="enquire-button">Enquire Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more cards here for Slide 2 if needed -->
+                        </div>
+                    </div>
+    
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-md-around justify-content-sm-around justify-content-lg-evenly">
+                            <div class="card" style="width: 30rem;">
+                                <img src="./assets/farmhouse-1.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-text">House-5</h5>
+                                    <p class="featured">Featured <span><img src="./assets/featured-icon.svg"></span></p>
+                                    <div class="facilities d-flex justify-content-evenly">
+                                        <p><span><img src="./assets/Bed.svg"></span> 3 Bed</p>
+                                        <p><span><img src="./assets/Carpet.svg"></span> 1250 sq m.</p>
+                                        <p><span><img src="./assets/Location.svg"></span> Pune</p>
+                                    </div>
+                                    <div class="call d-flex justify-content-between align-content-center">
+                                        <h5 class="price pt-2">₹24 Lakhs</h5>
+                                        <a href="#" class="enquire-button">Enquire Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 30rem;">
+                                <img src="./assets/House-2.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-text">House-6</h5>
+                                    <p class="featured">Featured <span><img src="./assets/featured-icon.svg"></span></p>
+                                    <div class="facilities d-flex justify-content-evenly">
+                                        <p><span><img src="./assets/Bed.svg"></span> 3 Bed</p>
+                                        <p><span><img src="./assets/Carpet.svg"></span> 1250 sq m.</p>
+                                        <p><span><img src="./assets/Location.svg"></span> Pune</p>
+                                    </div>
+                                    <div class="call d-flex justify-content-between align-content-center">
+                                        <h5 class="price pt-2">₹24 Lakhs</h5>
+                                        <a href="#" class="enquire-button">Enquire Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more cards here for Slide 3 if needed -->
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Controls -->
+                <a class="carousel-control-prev" href="#propertyCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#propertyCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="updates">
+        <h1 class="heading text-center py-5">Want To Get More Updates?</h1>
+        <div class="updateForm d-flex justify-content-evenly align-content-center">
+            <form>
+                <div class="mb-3">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+                  <div id="emailHelp" class="form-text pb-3">We'll never share your email with anyone else.</div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+            <img src="./assets/3D-House.png" alt="" srcset="">
+        </div>
+    </section>
+    
+    <section id="footer">
+        <div class="footer d-flex justify-content-evenly py-5">
+            <div class="footer-brand">
+                <img src="./assets/Footer-Brand.svg" alt="">
+            </div>
+            <div class="social-links">
+                <h2 class="footer-heading text-white">Social Links</h2>
+                <a href="#"><img src="./assets/Facebook.svg" class="px-2" alt=""></a>
+                <a href="#"><img src="./assets/Whatsapp.svg" class="px-2" alt=""></a>
+                <a href="#"><img src="./assets/Instagram.svg" class="px-2" alt=""></a>
+                <a href="#"><img src="./assets/Telegram.svg" class="px-2" alt=""></a>
+            </div>
+            <div class="useful-links">
+                <h2 class="footer-heading text-white">Useful Links</h2>
+                <a href="#" class="footer-link-text"><p>Home</p></a>
+                <a href="#" class="footer-link-text"><p>Properties</p></a>
+                <a href="#" class="footer-link-text"><p>About us</p></a>
+                <a href="#" class="footer-link-text"><p>Contact us</p></a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="js"></script>
+</body>
+
+</html>
